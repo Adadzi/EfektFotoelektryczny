@@ -72,22 +72,15 @@ public class imagePanel extends JPanel implements Runnable{
 			double delta = 0;
 			long lastTime = System.nanoTime();
 			long currentTime;
-			long timer=0;
 			
 				while(watek != null) {
 						currentTime = System.nanoTime();
 						delta+=(currentTime-lastTime)/drawInterval;
-						timer+=(currentTime-lastTime);
 						lastTime = currentTime;
 						if(delta>=1) {
 							update();
 							repaint();
 							delta--;
-							licznikRysowanie++;
-						}
-						if(timer>=1000000000) {
-							licznikRysowanie=0;
-							timer = 0;
 						}
 					}
 		}
