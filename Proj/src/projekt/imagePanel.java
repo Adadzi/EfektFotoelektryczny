@@ -16,7 +16,6 @@ public class imagePanel extends JPanel implements Runnable{
 	Graphics2D g2d;
 	Color kolorfotonow;
 	Thread watek;
-	int licznikRysowanie = 0;
 	int FPS = 60;
 	boolean wlaczony=false;
 	int licznik = 0;
